@@ -1,0 +1,2 @@
+rootProject.name = "Bill_Slip_initial"
+include ':app'
