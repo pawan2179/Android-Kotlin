@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/addItemToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/amber_700"
+            android:padding="30dp"
+            app:title="Add Task" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvaddTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addItemToolbar"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Task Title"
+            android:textColor="@color/deep_orange500"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvaddTaskTitle"
+            android:layout_alignStart="@id/tvaddTaskTitle"
+            android:layout_alignLeft="@id/tvaddTaskTitle"
+            android:layout_alignEnd="@id/tvaddTaskTitle"
+            android:layout_alignRight="@id/tvaddTaskTitle"
+            android:layout_marginTop="8dp"
+            app:boxStrokeColor="@color/deep_orange500"
+            app:hintTextColor="@color/amber_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etaddTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Title"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvaddTaskRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputTitle"
+            android:layout_alignStart="@id/tvaddTaskTitle"
+            android:layout_alignLeft="@id/tvaddTaskTitle"
+            android:layout_alignEnd="@+id/tvaddTaskTitle"
+            android:layout_alignRight="@+id/tvaddTaskTitle"
+            android:layout_marginTop="32sp"
+            android:text="Task Remarks"
+            android:textColor="@color/deep_orange500"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textRemarksTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvaddTaskRemarks"
+            android:layout_alignLeft="@+id/tvaddTaskTitle"
+            android:layout_alignRight="@id/tvaddTaskTitle"
+            android:layout_marginTop="8dp"
+            app:boxStrokeColor="@color/deep_orange500"
+            app:hintTextColor="@color/amber_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etaddTaskRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Remarks for Task"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvaddTaskPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRemarksTitle"
+            android:layout_alignStart="@+id/tvaddTaskTitle"
+            android:layout_alignLeft="@+id/tvaddTaskTitle"
+            android:layout_alignEnd="@+id/tvaddTaskTitle"
+            android:layout_alignRight="@+id/tvaddTaskTitle"
+            android:layout_marginTop="32dp"
+            android:text="Priority"
+            android:textColor="@color/deep_orange500"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addTaskTextPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvaddTaskPriority"
+            android:layout_alignStart="@+id/tvaddTaskTitle"
+            android:layout_alignLeft="@+id/tvaddTaskTitle"
+            android:layout_alignEnd="@+id/tvaddTaskTitle"
+            android:layout_alignRight="@+id/tvaddTaskTitle"
+            android:layout_marginTop="8dp"
+            app:boxStrokeColor="@color/deep_orange500"
+            app:hintTextColor="@color/amber_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddTaskPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Task Priority" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/LLaddTaskTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/addTaskTextPriority"
+            android:layout_marginTop="24dp"
+            android:layout_alignLeft="@+id/tvaddTaskTitle"
+            android:layout_alignRight="@+id/tvaddTaskTitle">
+
+            <LinearLayout
+                android:id="@+id/LLaddTaskHours"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="8dp">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvaddTaskHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hours"
+                    android:textSize="16sp"
+                    android:textColor="@color/deep_orange500" />
+                <Spinner
+                    android:id="@+id/spinnerHrs"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LLaddTaskMinutes"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Minutes"
+                    android:textSize="16sp"
+                    android:textColor="@color/deep_orange500"/>
+
+                <Spinner
+                    android:id="@+id/spinnerMinutes"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnaddTaskAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Task"
+            android:padding="16dp"
+            android:layout_below="@+id/LLaddTaskTime"
+            android:textSize="16sp"
+            android:backgroundTint="@color/amber_300"
+            app:cornerRadius="50dp"
+            android:layout_marginTop="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp" />
+
+    </RelativeLayout>
+</layout>
