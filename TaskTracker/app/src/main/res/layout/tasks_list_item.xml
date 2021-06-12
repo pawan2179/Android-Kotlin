@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="8dp"
+    android:layout_margin="8dp"
+    android:elevation="50dp"
     app:cardCornerRadius="8dp">
 
     <RelativeLayout
@@ -33,6 +34,7 @@
             tools:text="Remarks"
             android:maxWidth="200dp"
             android:textSize="16sp"
+            android:maxLines="1"
             android:layout_below="@+id/tvTitle"
             android:layout_alignLeft="@id/tvTitle"
             android:layout_marginTop="4dp"/>
@@ -58,36 +60,29 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
-            android:gravity="bottom"
             android:layout_alignBottom="@+id/tvTitle"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTaskStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start"
             app:cornerRadius="50dp"
             android:textSize="10sp"
             android:layout_alignParentEnd="true"
-            android:layout_below="@+id/tvPriority"
+            android:layout_below="@+id/tvRemarks"
             android:layout_alignParentRight="true"
             android:layout_alignBottom="@id/tvDuration"
+            android:layout_alignTop="@+id/tvRemarks"
             android:layout_alignRight="@id/tvPriority"
             app:backgroundTint="@color/start_green"
-            android:visibility="gone"/>
+            android:visibility="visible"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pause"
-            app:cornerRadius="50dp"
-            android:textSize="10sp"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/tvPriority"
-            android:layout_alignParentRight="true"
-            android:layout_alignBottom="@id/tvDuration"
-            android:layout_alignRight="@id/tvPriority"
-            app:backgroundTint="@color/amber_700"/>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/amber_700"
+        android:layout_below="@+id/tvDuration"/>
 
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>

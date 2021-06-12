@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".AddActivity">
@@ -13,7 +14,8 @@
             android:layout_height="wrap_content"
             android:background="@color/amber_700"
             android:padding="30dp"
-            app:title="Add Task" />
+            app:title="Add Task"
+            app:titleTextColor="@color/white"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvaddTaskTitle"
@@ -98,6 +100,7 @@
             android:textColor="@color/deep_orange500"
             android:textSize="16sp" />
 
+        <!--
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/addTaskTextPriority"
             android:layout_width="match_parent"
@@ -116,18 +119,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Task Priority" />
+            -->
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinneraddTaskTextPriority"
+            android:layout_below="@id/tvaddTaskPriority"
+            android:layout_alignStart="@+id/tvaddTaskTitle"
+            android:layout_alignLeft="@+id/tvaddTaskTitle"
+            android:layout_alignEnd="@+id/tvaddTaskTitle"
+            android:layout_alignRight="@+id/tvaddTaskTitle"
+            android:layout_marginTop="8dp"/>
 
-        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:id="@+id/LLaddTaskTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/addTaskTextPriority"
+            android:layout_below="@+id/spinneraddTaskTextPriority"
             android:layout_marginTop="24dp"
             android:layout_alignLeft="@+id/tvaddTaskTitle"
-            android:layout_alignRight="@+id/tvaddTaskTitle">
+            android:layout_alignRight="@+id/tvaddTaskTitle"
+            android:baselineAligned="false"
+            android:layout_alignStart="@+id/tvaddTaskTitle"
+            android:layout_alignEnd="@+id/tvaddTaskTitle">
 
             <LinearLayout
                 android:id="@+id/LLaddTaskHours"
@@ -148,7 +164,7 @@
                     android:id="@+id/spinnerHrs"
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"/>
 
@@ -176,7 +192,8 @@
                     android:id="@+id/spinnerMinutes"
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center" />
 
             </LinearLayout>
